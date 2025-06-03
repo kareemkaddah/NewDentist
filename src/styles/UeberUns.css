@@ -1,0 +1,189 @@
+.ueber-uns-page {
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  padding-top: 80px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #83c5be 0%, #006d77 100%);
+  padding: 4rem 0;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 1rem 0;
+}
+
+.hero-section .subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--secondary-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.team-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.team-text {
+  flex: 1;
+}
+
+.team-text h2 {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.team-text p {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.team-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-text li {
+  color: var(--primary-color);
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0, 109, 119, 0.1);
+}
+
+.team-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.team-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-section {
+  padding: 5rem 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.philosophy-section h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.philosophy-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.philosophy-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.philosophy-card p {
+  line-height: 1.6;
+}
+
+.practice-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.practice-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
+}
+
+.practice-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.practice-image {
+  flex: 1;
+  max-width: 600px;
+}
+
+.practice-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.practice-text {
+  flex: 1;
+}
+
+.practice-text p {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .team-content,
+  .practice-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-image,
+  .practice-image {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .team-text ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .team-section,
+  .philosophy-section,
+  .practice-section {
+    padding: 3rem 1rem;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+}
