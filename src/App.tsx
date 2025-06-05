@@ -266,22 +266,27 @@ function Home() {
         <div className='container'>
           <h2>Kontakt</h2>
           <div className='contact-grid'>
-            <div className='contact-info'>
+            <div className='contact-info' style={{ textAlign: 'left' }}>
               <h3>Unsere Adresse</h3>
               <p>Musterstraße 123</p>
               <p>12345 Musterstadt</p>
               <p>Deutschland</p>
-            </div>
-            <div className='contact-info'>
               <h3>Kontakt</h3>
               <p>Telefon: +49 123 456789</p>
               <p>E-Mail: info@drgabimousa.de</p>
             </div>
-            <div className='contact-info'>
+
+            <div
+              className='contact-info'
+              style={{ textAlign: 'left', padding: 'auto' }}
+            >
               <h3>Öffnungszeiten</h3>
-              <p>Montag - Freitag: 8:00 - 18:00</p>
-              <p>Samstag: 9:00 - 13:00</p>
-              <p>Sonntag: Geschlossen</p>
+              <p>Montag: 08:00-17</p>
+              <p>Dienstag: 08:00-17</p>
+              <p>Mittwoch: 08:00-17</p>
+              <p>Donnerstag: 08:00-17</p>
+              <p>Freitag: 08:00-17</p>
+              <p>Samstag & Sonntag: Geschlossen</p>
             </div>
           </div>
           <div className='contact-cta'>
