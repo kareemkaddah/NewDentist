@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   ToothIcon,
   TreatmentIcon,
@@ -16,9 +16,6 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 
 function Home() {
-  const [years, setYears] = useState(0);
-  const [patients, setPatients] = useState(0);
-  const [rating, setRating] = useState(0);
   const [currentReview, setCurrentReview] = useState(0);
   const [slideDirection, setSlideDirection] = useState('');
 
@@ -57,93 +54,8 @@ function Home() {
     }, 300);
   };
 
-  useEffect(() => {
-    const duration = 4000;
-    const steps = 100;
-    const stepDuration = duration / steps;
-
-    // Animate years
-    let currentYears = 0;
-    const yearsInterval = setInterval(() => {
-      currentYears += 15 / steps;
-      if (currentYears >= 15) {
-        setYears(15);
-        clearInterval(yearsInterval);
-      } else {
-        setYears(Math.floor(currentYears));
-      }
-    }, stepDuration);
-
-    // Animate patients
-    let currentPatients = 0;
-    const patientsInterval = setInterval(() => {
-      currentPatients += 5000 / steps;
-      if (currentPatients >= 5000) {
-        setPatients(5000);
-        clearInterval(patientsInterval);
-      } else {
-        setPatients(Math.floor(currentPatients));
-      }
-    }, stepDuration);
-
-    // Animate rating
-    let currentRating = 0;
-    const ratingInterval = setInterval(() => {
-      currentRating += 4.9 / steps;
-      if (currentRating >= 4.9) {
-        setRating(4.9);
-        clearInterval(ratingInterval);
-      } else {
-        setRating(Number(currentRating.toFixed(1)));
-      }
-    }, stepDuration);
-
-    return () => {
-      clearInterval(yearsInterval);
-      clearInterval(patientsInterval);
-      clearInterval(ratingInterval);
-    };
-  }, []);
-
   return (
     <>
-      <section id='home' className='hero'>
-        <div className='hero-content'>
-          <div className='hero-text'>
-            <h1>Ihr Lächeln ist Unsere Priorität</h1>
-            <p className='subtitle'>
-              Erleben Sie außergewöhnliche Zahnpflege mit unserem Team
-              erfahrener Fachleute
-            </p>
-            <p className='hero-description'>
-              Wir bieten umfassende zahnärztliche Leistungen in einer
-              angenehmen, modernen Umgebung.
-            </p>
-            <div className='hero-stats'>
-              <div className='stat-item'>
-                <span className='stat-number'>{years}+</span>
-                <span className='stat-label'>Jahre Erfahrung</span>
-              </div>
-              <div className='stat-item'>
-                <span className='stat-number'>{patients}+</span>
-                <span className='stat-label'>Zufriedene Patienten</span>
-              </div>
-              <div className='stat-item'>
-                <span className='stat-number'>{rating}</span>
-                <span className='stat-label'>Sterne Bewertung</span>
-              </div>
-            </div>
-            <button className='cta-button'>Termin vereinbaren</button>
-          </div>
-          <div className='hero-image'>
-            <img
-              src='/images/Zahnarzt_lächelt.jpg'
-              alt='Dr. Gabi Mousa Zahnarztpraxis'
-            />
-          </div>
-        </div>
-      </section>
-
       <section id='services' className='services'>
         <div className='container'>
           <h2>Leistungen</h2>
